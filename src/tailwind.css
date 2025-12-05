@@ -1,0 +1,32 @@
+/*
+  This file is required to enable Tailwind CSS features
+  when running the project in a standard Create React App environment.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom utility for the animation defined in App.jsx */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-down {
+  animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
